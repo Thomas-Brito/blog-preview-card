@@ -13,16 +13,18 @@
 html, body {
     height: 100%;
     font-family: "Figtree", sans-serif;
-    font-size: 16px;
+    /* font-size: 16px; */
     width: 100%;
 }
 
 body {
     align-items: center;
     background-color: var(--amarelo);
+    box-sizing: border-box;
     display: flex;
     flex-direction: column;
     justify-content: center;
+    padding: 1.5rem;
     margin: auto;
 }
 
@@ -33,13 +35,15 @@ main {
     box-sizing: border-box;
     box-shadow: 8px 8px var(--preto);
     line-height: 150%;
+    max-width: 24rem;
     padding: 1.5rem;
-    width: 24rem;
+    width: 100%;
 }
 
 #imgprincipal {
     border-radius: 10px;
     margin-bottom: 1.5rem;
+    max-width: 100%;
 }
 
 #conteudo {
@@ -48,6 +52,7 @@ main {
 
 h1 {
     font: var(--fontetitulo);
+    font-size: clamp(1.25rem, 1.16197183098592rem + 0.375586854460094vw, 1.5rem);
 }
 
 h1, p {
@@ -64,16 +69,20 @@ h1:hover {
     border-radius: 4px;
     display: inline-block;
     font: var(--fontetexto14n);
+    font-size: clamp(0.75rem, 1.33098591549296rem + 0.187793427230047vw, 0.875rem);
     padding: 0.25rem 0.75rem;
 }
 
 #publicado {
     font: var(--fontetexto14);
+    font-size: clamp(0.75rem, 1.33098591549296rem + 0.187793427230047vw, 0.875rem);
 }
 
 #descricao {
     color: var(--cinzaclaro);
     font: var(--fontetexto16);
+    font-size: clamp(0.875rem, 1.33098591549296rem + 0.187793427230047vw, 1rem);
+
 }
 
 #persona {
@@ -85,6 +94,7 @@ h1:hover {
 #autor {
     display: inline-block;
     font: var(--fontetexto14n);
+    font-size: clamp(0.75rem, 1.33098591549296rem + 0.187793427230047vw, 0.875rem);
     margin: 0;
 }
 
@@ -94,7 +104,7 @@ h1:hover {
     width: 2rem;
 }
 
-@media only screen and (max-width: 425px) {
+/* @media only screen and (max-width: 425px) {
     main {
         width: 20.4375em;
     }
@@ -105,10 +115,10 @@ h1:hover {
         font-size: 0.75rem;
     }
     h1 {
-        font-size: 1.25em;
+        font-size: 1.25rem;
     }
     #descricao {
-        font-size: 0.875em;
+        font-size: 0.875rem;
     }
 }
 
@@ -119,4 +129,4 @@ h1:hover {
     #imgprincipal {
         width: 100%;
     }
-}
+} */
