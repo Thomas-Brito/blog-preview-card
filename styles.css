@@ -1,132 +1,101 @@
 :root {
-    --amarelo: hsl(47, 88%, 63%);
-    --branco: hsl(0, 0%, 100%);
-    --cinzaclaro: hsl(0, 0%, 42%);
-    --cinzaescuro: hsl(0, 0%, 7%);
-    --preto: hsl(0, 0%, 0%);
-    --fontetexto14: 500 14px/150% "Figtree";
-    --fontetexto14n: 800 14px/150% "Figtree";
-    --fontetexto16: 500 16px/150% "Figtree";
-    --fontetitulo: 800 24px/150% "Figtree";
+  /*Cores*/
+  --amarelo: hsl(47, 88%, 63%);
+  --branco: hsl(0, 0%, 100%);
+  --cinzaClaro: hsl(0, 0%, 42%);
+  --cinzaEscuro: hsl(0, 0%, 7%);
+  --preto: hsl(0, 0%, 0%);
+  /*Fontes*/
+  --texto14: 500 clamp(0.75rem, 0.714285714285714rem + 0.178571428571429vw, 0.875rem)/150% "Figtree";
+  --texto14n: 800 clamp(0.75rem, 0.714285714285714rem + 0.178571428571429vw, 0.875rem)/150% "Figtree";
+  --texto16: 500 clamp(0.875rem, 0.839285714285714rem + 0.178571428571429vw, 1rem)/150% "Figtree";
+  --titulo24: 800 clamp(1.25rem, 1.17857142857143rem + 0.357142857142857vw, 1.5rem)/150% "Figtree";
+}
+
+* {
+  box-sizing: border-box;
 }
 
 html, body {
-    height: 100%;
-    font-family: "Figtree", sans-serif;
-    /* font-size: 16px; */
-    width: 100%;
+  height: 100%;
+  width: 100%;
 }
 
 body {
-    align-items: center;
-    background-color: var(--amarelo);
-    box-sizing: border-box;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    padding: 1.5rem;
-    margin: auto;
+  align-items: center;
+  background-color: var(--amarelo);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin: auto;
+  padding: 1.5rem;
 }
 
 main {
-    background-color: var(--branco);
-    border: 1px solid var(--preto);
-    border-radius: 20px;
-    box-sizing: border-box;
-    box-shadow: 8px 8px var(--preto);
-    line-height: 150%;
-    max-width: 24rem;
-    padding: 1.5rem;
-    width: 100%;
+  background-color: var(--branco);
+  border: 1px solid var(--preto);
+  border-radius: 20px;
+  box-sizing: border-box;
+  box-shadow: 8px 8px var(--preto);
+  padding: 1.5rem;
+  width: clamp(20.4375rem, 50vw, 24rem);
 }
 
 #imgprincipal {
-    border-radius: 10px;
-    margin-bottom: 1.5rem;
-    max-width: 100%;
+  border-radius: 10px;
+  margin-bottom: 1.5rem;
+  max-width: 100%;
 }
 
 #conteudo {
-    margin-bottom: 1.5rem;
+  margin-bottom: 1.5rem;
 }
 
 h1 {
-    font: var(--fontetitulo);
-    font-size: clamp(1.25rem, 1.16197183098592rem + 0.375586854460094vw, 1.5rem);
+  font: var(--titulo24);
 }
 
 h1, p {
-    margin: 0 0 0.75rem 0;
+  margin: 0 0 0.75rem 0;
 }
 
 h1:hover {
-    color: var(--amarelo);
-    cursor: pointer;
+  color: var(--amarelo);
+  cursor: pointer;
 }
 
 #estado {
-    background-color: var(--amarelo);
-    border-radius: 4px;
-    display: inline-block;
-    font: var(--fontetexto14n);
-    font-size: clamp(0.75rem, 1.33098591549296rem + 0.187793427230047vw, 0.875rem);
-    padding: 0.25rem 0.75rem;
+  background-color: var(--amarelo);
+  border-radius: 4px;
+  display: inline-block;
+  font: var(--texto14n);
+  padding: 0.25rem 0.75rem;
 }
 
 #publicado {
-    font: var(--fontetexto14);
-    font-size: clamp(0.75rem, 1.33098591549296rem + 0.187793427230047vw, 0.875rem);
+  font: var(--texto14);
 }
 
 #descricao {
-    color: var(--cinzaclaro);
-    font: var(--fontetexto16);
-    font-size: clamp(0.875rem, 1.33098591549296rem + 0.187793427230047vw, 1rem);
+  color: var(--cinzaClaro);
+  font: var(--texto16);
 
 }
 
 #persona {
-    align-items: center;
-    display: flex;
-    flex-direction: row;
+  align-items: center;
+  display: flex;
+  flex-direction: row;
 }
 
 #autor {
-    display: inline-block;
-    font: var(--fontetexto14n);
-    font-size: clamp(0.75rem, 1.33098591549296rem + 0.187793427230047vw, 0.875rem);
-    margin: 0;
+  display: inline-block;
+  font: var(--texto14n);
+  margin: 0;
 }
 
 #fotoautor {
-    height: 2rem;
-    padding-right: 0.75rem;
-    width: 2rem;
+  height: 2rem;
+  margin-right: 0.75rem;
+  width: 2rem;
 }
-
-/* @media only screen and (max-width: 425px) {
-    main {
-        width: 20.4375em;
-    }
-    #imgprincipal {
-        width: 17.4375em;
-    }
-    #estado, #publicado, #autor {
-        font-size: 0.75rem;
-    }
-    h1 {
-        font-size: 1.25rem;
-    }
-    #descricao {
-        font-size: 0.875rem;
-    }
-}
-
-@media only screen and (max-width: 375px) {
-    main {
-        width: 90%;
-    }
-    #imgprincipal {
-        width: 100%;
-    }
-} */
