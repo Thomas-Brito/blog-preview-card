@@ -7,10 +7,11 @@
 
   --cor-fundo-3: hsl(0, 0%, 0%);
 
-  --fonte-1: 800 clamp(1.25rem, 1.17857142857143rem + 0.357142857142857vw, 1.5rem)/150% "Figtree", sans-serif;
-  --fonte-2: 500 clamp(0.875rem, 0.839285714285714rem + 0.178571428571429vw, 1rem)/150% "Figtree", sans-serif;
-  --fonte-3: 500 clamp(0.75rem, 0.714285714285714rem + 0.178571428571429vw, 0.875rem)/150% "Figtree", sans-serif;
-  --fonte-4: 800 clamp(0.75rem, 0.714285714285714rem + 0.178571428571429vw, 0.875rem)/150% "Figtree", sans-serif;
+  --fonte-1: 800 clamp(1.25rem, 1.17857142857143rem + 0.357142857142857vw, 1.5rem)/150% "Figtree", sans-serif; /* min: 20px, max: 24px */
+  --fonte-2: 500 clamp(0.875rem, 0.839285714285714rem + 0.178571428571429vw, 1rem)/150% "Figtree", sans-serif; /* min: 14px, max: 16px */
+  --fonte-3: 500 clamp(0.75rem, 0.714285714285714rem + 0.178571428571429vw, 0.875rem)/150% "Figtree", sans-serif; /* min: 12px, max: 14px */
+  --fonte-4: 800 clamp(0.75rem, 0.714285714285714rem + 0.178571428571429vw, 0.875rem)/150% "Figtree", sans-serif; /* min: 12px, max: 14px */
+  --fonte-5: 500 clamp(0.75rem, 0.714285714285714rem + 0.178571428571429vw, 0.875rem)/200% "Figtree", sans-serif; /* min: 12px, max: 14px */
 }
 
 :root[data-theme='light'] {
@@ -44,6 +45,7 @@
 .fonte-2 { font: var(--fonte-2); }
 .fonte-3 { font: var(--fonte-3); }
 .fonte-4 { font: var(--fonte-4); }
+.fonte-5 { font: var(--fonte-5); }
 
 html, body {
   align-items: center;
@@ -54,7 +56,7 @@ html, body {
   min-height: 100%;
 }
 
-.tema {
+.abrir-modal {
   background-color: transparent;
   border: none;
   border-radius: 50%;
@@ -65,7 +67,7 @@ html, body {
   top: 1rem;
 }
 
-.tema:hover {
+.abrir-modal:hover {
   cursor: pointer;
 }
 
@@ -95,6 +97,11 @@ html, body {
   width: 100%;
 }
 
+aside p {
+  margin: 0;
+  padding: 0.5rem 0;
+}
+
 .fechar-modal {
   align-self: center;
   font-size: 1.75rem;
@@ -121,10 +128,10 @@ main {
   box-sizing: border-box;
   box-shadow: 8px 8px var(--cor-fundo-3);
   padding: 1.5rem;
-  width: clamp(20.4375rem, 50vw, 24rem);
+  width: clamp(20rem, 50vw, 24rem);
 }
 
-.imgprincipal {
+.img-principal {
   border-radius: 10px;
   margin-bottom: 1.5rem;
   max-width: 100%;
